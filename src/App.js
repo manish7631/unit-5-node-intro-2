@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import imgtag from  "./image/react-context-api-4929b3703a1a7082d99b53eb1bbfc31f.png"
 import './App.css';
 
 function App() {
+  const section = ["Services", "Projects", "About"];
+  const btn = "contact";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <div id='navbar'>
+         <div className='logo'>
+         <img src={imgtag} alt=""/>
+           </div>
+         <div className='section'>
+           <ul>
+             {section.map((e) => {
+               return <li>{e}</li>
+             })}
+           </ul>
+         </div>
+         <div className='btn'>{btn}</div>
+       </div>
     </div>
   );
 }
